@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenScore - Recomendaciones</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+        }
+
+        aside {
+            width: 200px;
+            background-color: #a93232;
+            padding: 15px;
+            height: 100vh;
+            flex-shrink: 0;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        aside ul li a:hover {
+            color: #ff0000;
+        }
+
+        header {
+            background-color: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ff0000;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header button {
+            padding: 5px 10px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        header button:hover {
+            background-color: #cc0000;
+        }
+
+        main {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .movie-card {
+            border: 1px solid #a93232;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            vertical-align: top;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-card img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .movie-card img:hover {
+            opacity: 0.8;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #a93232;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .filters button:hover {
+            background-color: #ff0000;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            outline: none;
+        }
+        a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.movie-card h4, .movie-card p {
+    color: white;
+}
+
+    </style>
+    <script>
+        function filterMovies(category) {
+            const movieContainer = document.getElementById('movie-container');
+            movieContainer.innerHTML = '';
+
+            const movies = {
+                genero: [
+                    {
+                        title: 'Interstellar',
+                        img: 'img/poster-interstellar.jpg',
+                        genre: 'Ciencia Ficción, Aventura',
+                        synopsis: 'Una misión épica para salvar a la humanidad viajando a través de un agujero de gusano.',
+                        link: `detalles.html?title=Interstellar&img=img/poster-interstellar.jpg&genre=Ciencia%20Ficción,%20Aventura&synopsis=Una%20misión%20épica%20para%20salvar%20a%20la%20humanidad`
+                    },
+                    {
+                        title: 'Inception',
+                        img: 'img/poster-inception.jpg',
+                        genre: 'Ciencia Ficción, Suspenso',
+                        synopsis: 'Ladrones que entran en los sueños para implantar ideas.',
+                        link: `detalles.html?title=Inception&img=img/poster-inception.jpg&genre=Ciencia%20Ficción,%20Suspenso&synopsis=Ladrones%20que%20entran%20en%20los%20sueños%20para%20implantar%20ideas.`
+                    }
+                ],
+                emociones: [
+                    {
+                        title: 'Inside Out',
+                        img: 'img/poster-insideout.jpg',
+                        emotions: 'Alegría, Tristeza, Nostalgia',
+                        synopsis: 'Las emociones de una niña deben trabajar juntas mientras enfrenta un gran cambio en su vida.',
+                        link: `detalles.html?title=Inside%20Out&img=img/poster-insideout.jpg&emotions=Alegría,%20Tristeza,%20Nostalgia&synopsis=Las%20emociones%20de%20una%20niña%20en%20un%20gran%20cambio`
+                    },
+                    {
+                        title: 'Soul',
+                        img: 'img/poster-soul.jpeg',
+                        emotions: 'Inspiración, Reflexión, Alegría',
+                        synopsis: 'Un músico busca propósito en la vida tras una experiencia cercana a la muerte.',
+                        link: `detalles.html?title=Soul&img=img/poster-soul.jpeg&emotions=Inspiración,%20Reflexión,%20Alegría&synopsis=Un%20músico%20busca%20propósito`
+                    }
+                ],
+                duracion: [
+                    {
+                        title: 'Titanic',
+                        img: 'img/poster-titanic.jpg',
+                        duration: '3 horas y 15 minutos',
+                        synopsis: 'Una trágica historia de amor a bordo del Titanic.',
+                        link: `detalles.html?title=Titanic&img=img/poster-titanic.jpg&duration=3%20horas%20y%2015%20minutos&synopsis=Una%20trágica%20historia%20de%20amor`
+                    },
+                    {
+                        title: 'El Irlandés',
+                        img: 'img/poster-elirlandes.jpg',
+                        duration: '3 horas y 30 minutos',
+                        synopsis: 'La historia de un sicario de la mafia durante varias décadas.',
+                        link: `detalles.html?title=El%20Irlandés&img=img/poster-elirlandes.jpg&duration=3%20horas%20y%2030%20minutos&synopsis=La%20historia%20de%20un%20sicario`
+                    }
+                ],
+                año: [
+                    {
+                        title: 'Dune',
+                        img: 'img/poster-dune.jpg',
+                        year: 2021,
+                        synopsis: 'Una lucha por el control de la especia en un planeta desértico.',
+                        link: `detalles.html?title=Dune&img=img/poster-dune.jpg&year=2021&synopsis=Una%20lucha%20por%20el%20control%20de%20la%20especia`
+                    },
+                    {
+                        title: 'Barbie',
+                        img: 'img/poster-barbie.jpg',
+                        year: 2023,
+                        synopsis: 'Una muñeca debe encontrar su propósito en el mundo real.',
+                        link: `detalles.html?title=Barbie&img=img/poster-barbie.jpg&year=2023&synopsis=Una%20muñeca%20busca%20su%20propósito`
+                    }
+                ]
+            };
+
+            movies[category].forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.innerHTML = `
+                    <a href="${movie.link}">
+                        <img src="${movie.img}" alt="${movie.title}">
+                        <h4>${movie.title}</h4>
+                        <p><strong>${category === 'genero' ? 'Género' : category === 'emociones' ? 'Emociones' : category === 'duracion' ? 'Duración' : 'Año'}:</strong> ${movie.genre || movie.emotions || movie.duration || movie.year}</p>
+                        <p>${movie.synopsis}</p>
+                    </a>
+                `;
+                movieContainer.appendChild(card);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <aside>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="SC_Sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="criticas.html">Críticas</a></li>
+            <li><a href="TopPeliculas.html">Top Películas</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="SC_Contacto.html">Contacto</a></li>
+            <li><a href="index.php">Merch</a></li>
+        </ul>
+    </aside>
+    <div style="flex-grow: 1;">
+        <header>
+            <div id="logo">ScreenScore</div>
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+        </header>
+        <main>
+            <div class="filters">
+                <button onclick="filterMovies('genero')">Por Género</button>
+                <button onclick="filterMovies('emociones')">Por Emociones</button>
+                <button onclick="filterMovies('duracion')">Por Duración</button>
+                <button onclick="filterMovies('año')">Por Año</button>
+            </div>
+            <div id="movie-container"></div>
+        </main>
+        <footer>
+            <p>© 2024 ScreenScore. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

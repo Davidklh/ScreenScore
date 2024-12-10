@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - ScreenScore</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/SC_Sobre_nosotros.css">
+</head>
+
+<body>
+    <aside>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="SC_Sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="criticas.html">Críticas</a></li>
+            <li><a href="TopPeliculas.html">Top Películas</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="SC_Contacto.html">Contacto</a></li>
+            <li><a href="index.php">Merch</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-container">
+        <header>
+            <h1>ScreenScore</h1>
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+            <button>Iniciar sesión</button>
+        </header>
+
+        <main>
+            <section class="about">
+                <h2>Sobre Nosotros</h2>
+                <p style="margin-left: 10px;">En ScreenScore, somos apasionados del cine y nuestro objetivo es ofrecer
+                    una plataforma completa para que los amantes del cine puedan descubrir, evaluar y compartir
+                    opiniones sobre las mejores películas. Nos comprometemos a proporcionar reseñas objetivas y
+                    detalladas que ayuden a la audiencia a tomar decisiones informadas sobre qué películas ver.</p>
+                <div id="aboutCarousel" class="carousel slide about-carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/Journey.png" height="500px" class="d-block w-100"
+                                alt="Imagen 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Nuestra Historia</h5>
+                                <p>Descubre cómo comenzó ScreenScore.</p>
+                                <button class="btn btn-primary" onclick="location.href='historia.html'">Leer Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/G5.png" height="500px" class="d-block w-100"
+                                alt="Imagen 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Nuestro Equipo</h5>
+                                <p>Conoce a los expertos detrás de las críticas.</p>
+                                <button class="btn btn-primary" onclick="location.href='equipo.html'">Leer Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/12.png" height="500px" class="d-block w-100" alt="Imagen 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Nuestra Pasión</h5>
+                                <p>Amor y dedicación por el cine.</p>
+                                <button class="btn btn-primary" onclick="location.href='pasion.html'">Leer Más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+
+                <h3 style="margin-left: 10px;">Misión y Visión</h3>
+                <p><strong style="margin-left: 10px;">Misión:</strong> Proveer críticas y reseñas de películas con un
+                    enfoque en la calidad y el análisis detallado, ayudando a los usuarios a disfrutar de una
+                    experiencia cinematográfica completa.</p>
+                <p><strong style="margin-left: 10px;">Visión:</strong> Convertirnos en el referente principal en
+                    críticas de cine, proporcionando valor a nuestra comunidad con recomendaciones confiables y
+                    contenido único sobre el mundo del cine.</p>
+
+                <h3 style="margin-left: 10px;">Valores</h3>
+                <ul class="values">
+                    <li><strong style="margin-left: 10px;">Objetividad:</strong> Nuestras críticas son imparciales y
+                        objetivas.</li>
+                    <li><strong style="margin-left: 10px;">Pasión por el cine:</strong> Vivimos y respiramos el séptimo
+                        arte.</li>
+                    <li><strong style="margin-left: 10px;">Innovación:</strong> Siempre buscamos nuevas formas de
+                        mejorar la experiencia de nuestros usuarios.</li>
+                    <li><strong style="margin-left: 10px;">Integridad:</strong> Nos comprometemos con la transparencia y
+                        la honestidad en nuestras reseñas.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 ScreenScore. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

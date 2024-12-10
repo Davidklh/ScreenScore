@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Lora', serif; /* Textos generales */
+    color: #ffffff;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contact-container {
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título de la página */
+.contact-container h2 {
+    font-family: 'Oswald', sans-serif; /* Títulos */
+    font-size: 2em;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+/* Descripción inicial */
+.contact-container p {
+    font-family: 'Lora', serif; /* Textos generales */
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+    font-family: 'Lora', serif; /* Textos generales */
+    font-size: 1em;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif; /* Títulos */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #cc0000;
+}
+
+/* Información de contacto */
+.contact-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Redes Sociales */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    filter: grayscale(0%) brightness(1);
+}
+#twitter {
+    filter: grayscale(0%) brightness(3);
+}

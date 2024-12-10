@@ -1,0 +1,172 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+}
+
+/* Menú lateral */
+aside {
+    width: 200px;
+    background-color: #a93232;
+    padding: 15px;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+aside ul li a:hover {
+    color: #ff0000;
+}
+
+/* Contenido principal */
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+header {
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ff0000;
+    background-color: #333;
+    color: #fff;
+}
+
+header button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #cc0000;
+}
+
+/* Estilo de la página de detalles de la película */
+.movie-info {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.movie-poster {
+    margin-right: 20px;
+}
+
+.movie-details h2 {
+    font-size: 1.8em;
+    color: #ff0000;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.movie-details p,
+.movie-details ul {
+    font-size: 1.1em;
+}
+
+.movie-details ul {
+    padding-left: 20px;
+}
+
+/* Galería de imágenes */
+.movie-gallery {
+    margin-top: 40px;
+}
+
+.movie-gallery img {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.movie-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilos específicos de la película */
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    aside {
+        width: 100px;
+    }
+
+    .main-container {
+        margin-left: 120px;
+    }
+
+    .movie-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header input[type="text"] {
+        width: 150px;
+    }
+
+    header button {
+        padding: 5px 8px;
+    }
+
+    .movie-poster {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

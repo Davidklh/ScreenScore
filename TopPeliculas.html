@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenScore - Top Películas</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Tp.css">
+</head>
+
+<body>
+    <!-- Menú lateral -->
+    <aside>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="SC_Sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="criticas.html">Críticas</a></li>
+            <li><a href="TopPeliculas.html">Top Películas</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="SC_Contacto.html">Contacto</a></li>
+            <li><a href="index.php">Merch</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-container">
+        <!-- Encabezado -->
+        <header>
+            <div id="logo">ScreenScore</div>
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+            <div>
+                <button>Iniciar sesión</button>
+            </div>
+        </header>
+
+        <!-- Sección principal -->
+        <main>
+            <h2>Top Películas</h2>
+
+            <!-- Filtros -->
+            <section class="filters">
+                <div class="filter">
+                    <h3>Filtrar por Popularidad</h3>
+                    <select>
+                        <option>Más Populares</option>
+                        <option>Menos Populares</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <h3>Filtrar por Calificación</h3>
+                    <select>
+                        <option>Mejor Calificadas</option>
+                        <option>Peor Calificadas</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <h3>Filtrar por Fecha de Lanzamiento</h3>
+                    <select>
+                        <option>Más Recientes</option>
+                        <option>Más Antiguas</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Películas destacadas -->
+            <section id="top-movies">
+                <h3>Películas Mejor Calificadas</h3>
+                <div class="movie-card">
+                    Akira
+                    <br>
+                    <a href="Pelicula akira.html">
+                        <img src="./img/akira.jpg" alt="Película 1" width="100" height="auto">
+                       
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="Pelicula Dune.html">
+                        Dune
+                        <br>
+                        <img src="./img/dune.webp" alt="Película 2" width="100" height="auto">
+                        
+                    </a>
+                </div>
+                <div class="movie-card">
+                    The Shining
+                    <a href="Pelicula Resplandor.html">
+                        <img src="./img/resplandor.jpeg" alt="Película 3" width="100" height="auto">
+                        
+                    </a>
+                </div>
+                <div class="movie-card">
+                    The Godfather
+                    <a href="Pelicula padrino.html">
+                        <img src="./img/padrino.jpg" alt="Película 4" width="100" height="auto">
+                        
+                    </a>
+                </div>
+                <div class="movie-card">
+                    Back to the Future
+                    <a href="pagina-volver.html">
+                        <img src="./img/volver.jpg" alt="Película 5" width="100" height="auto">
+                        
+                    </a>
+                </div>
+                <div class="movie-card">
+                    Avatar
+                    <a href="Pelicula Avatar.html">
+                        <img src="./img/avatar.jpg" alt="Película 6" width="100" height="auto">
+                       
+                    </a>
+                </div>
+                <div class="movie-card">
+                    Lord of the Rings
+                    <a href="Pelicula LordoftheRings.html ">
+                        <img src="./img/anillos.jpg" alt="Película 7" width="100" height="auto">
+                        
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2024 ScreenScore. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
