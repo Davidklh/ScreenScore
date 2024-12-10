@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenScore - Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <aside>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="SC_Sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="criticas.html">Críticas</a></li>
+            <li><a href="TopPeliculas.html">Top Películas</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="SC_Contacto.html">Contacto</a></li>
+            <li><a href="index.php">Merch</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-container">
+        <header>
+            <h1>ScreenScore</h1>
+            <input type="text" placeholder="Buscar...">
+            <button onclick="location.href='login.php'">Iniciar sesión</button>
+        </header>
+
+        <main>
+            <div class="content-section">
+                <section id="emotional-map">
+                    <h2>Mapa Emocional</h2>
+                    <div class="map-placeholder" onclick="showEmotionalMap()">Gráfica Emocional</div>
+                </section>
+                
+                <div id="emotional-map-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeEmotionalMap()">&times;</span>
+                        <h2>Mapa Emocional Basado en Películas Recomendadas</h2>
+                        <img src="img/emotional-map-recommended.png" alt="Gráfico Emocional Basado en Películas" style="width: 100%; border-radius: 10px;">
+                        <p>Este gráfico representa las emociones predominantes en las películas recomendadas:</p>
+                        <ul>
+                            <li>"El Gran Hotel Budapest": Nostalgia, Alegría.</li>
+                            <li>"Parasite": Tensión, Sorpresa.</li>
+                            <li>"Interstellar": Asombro, Tristeza.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <section id="reviews" class="section">
+                    <h2>Reseñas Recientes</h2>
+                    <div class="section-content">
+                        <div class="card">
+                            <h3>Juan dijo: "Oppenheimer"</h3>
+                            <p>Un drama intenso y visualmente impresionante que explora la complejidad moral detrás de la creación de la bomba atómica.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Carlos dijo: "Spider-Man: Across the Spider-Verse"</h3>
+                            <p>Una obra maestra animada que lleva la narrativa del multiverso a nuevos niveles.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Maria dijo: "Barbie"</h3>
+                            <p>Una película sorprendentemente reflexiva y entretenida.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="recommended-movies" class="section">
+                    <h2>Películas Recomendadas</h2>
+                    <div class="section-content">
+                        <div class="card">
+                            <h3>"El Gran Hotel Budapest"</h3>
+                            <p>Una comedia encantadora de Wes Anderson.</p>
+                            <a href="peliculasindex1.html">
+                                <img src="img/poster-gran-hotel-budapest.jpg" alt="El Gran Hotel Budapest">
+                            </a>
+                        </div>
+                        <div class="card">
+                            <h3>"Parasite"</h3>
+                            <p>Un thriller surcoreano ganador del Oscar.</p>
+                            <a href="peliculasindex3.html">
+                                <img src="img/poster-parasite.jpg" alt="Parasite">
+                            </a>
+                        </div>
+                        <div class="card">
+                            <h3>"Interstellar"</h3>
+                            <p>Un viaje épico y emocional a través del espacio.</p>
+                            <a href="peliculasindex2.html">
+                                <img src="img/poster-interstellar.jpg" alt="Interstellar">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="poster">
+                <img src="img/poster-wicked.jpg" alt="Póster de Wicked" style="width: 100%; border-radius: 10px;">
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 ScreenScore. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        // Mostrar el modal
+        function showEmotionalMap() {
+            document.getElementById("emotional-map-modal").style.display = "block";
+        }
+    
+        // Cerrar el modal
+        function closeEmotionalMap() {
+            document.getElementById("emotional-map-modal").style.display = "none";
+        }
+    
+        // Cerrar el modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById("emotional-map-modal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

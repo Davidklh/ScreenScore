@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Película</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 300px;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .additional-info {
+            margin: 20px auto;
+            width: 80%;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <img id="img" src="" alt="Poster de la Película">
+    <p class="info" id="main-info"></p>
+    <p id="synopsis"></p>
+    <div class="additional-info" id="extra-info"></div>
+    <p><a href="recomendaciones.html">Volver</a></p>
+
+    <script>
+        // Obtener parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title');
+        const img = params.get('img');
+        const genre = params.get('genre');
+        const emotions = params.get('emotions');
+        const duration = params.get('duration');
+        const year = params.get('year');
+        const synopsis = params.get('synopsis');
+
+        // Asignar valores a los elementos HTML
+        document.getElementById('title').textContent = title;
+        document.getElementById('img').src = img;
+
+        // Mostrar la información relevante dependiendo de los parámetros
+        const mainInfo = document.getElementById('main-info');
+        const extraInfo = document.getElementById('extra-info');
+
+        if (genre) {
+            mainInfo.textContent = `Género: ${genre}`;
+            extraInfo.innerHTML = `
+                Este género es conocido por su capacidad de transportar a la audiencia a mundos imaginarios, 
+                explorar ideas científicas o sociales, y generar una conexión emocional a través de aventuras emocionantes. 
+                "${title}" destaca en este género por su impresionante narrativa y visuales, combinando la ciencia con la humanidad 
+                para ofrecer una experiencia inolvidable.
+            `;
+        } else if (emotions) {
+            mainInfo.textContent = `Emociones que despierta: ${emotions}`;
+            extraInfo.innerHTML = `
+                Esta película tiene como objetivo provocar emociones profundas en la audiencia. "${title}" es una obra que 
+                logra conectar con el espectador a través de su narrativa y personajes bien desarrollados, generando sentimientos 
+                como ${emotions.toLowerCase()}. Es ideal para quienes buscan una experiencia cinematográfica enriquecedora y conmovedora.
+            `;
+        } else if (duration) {
+            mainInfo.textContent = `Duración: ${duration}`;
+            extraInfo.innerHTML = `
+                La duración de esta película (${duration}) permite sumergir al espectador en una historia extensa y bien detallada. 
+                "${title}" utiliza este tiempo para desarrollar sus personajes, explorar su trama en profundidad y mantener al público 
+                cautivado de principio a fin. Es una opción ideal para quienes disfrutan de historias completas y bien elaboradas.
+            `;
+        } else if (year) {
+            mainInfo.textContent = `Año de estreno: ${year}`;
+            extraInfo.innerHTML = `
+                Estrenada en ${year}, "${title}" refleja los temas y técnicas cinematográficas más relevantes de su época. 
+                Este año marcó un hito en la industria del cine debido a su enfoque innovador y a la calidad de sus producciones, 
+                convirtiendo a "${title}" en un clásico contemporáneo que no puedes perderte.
+            `;
+        }
+
+        document.getElementById('synopsis').textContent = `Sinopsis: ${synopsis}`;
+    </script>
+</body>
+
+</html>
